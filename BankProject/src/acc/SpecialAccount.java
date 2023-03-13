@@ -1,5 +1,7 @@
 package acc;
 
+import exc.BankException;
+
 public class SpecialAccount extends Account {
 	String grade;
 	// 등급에 따라 이자율을 내부적으로 바꿔줬으면 좋겠다.
@@ -30,7 +32,7 @@ public class SpecialAccount extends Account {
 
 	
 	@Override
-	public void deposit (int money) {
+	public void deposit (int money) throws BankException {
 		super.deposit(money+(int)(money*rate));
 	}//override
 	
